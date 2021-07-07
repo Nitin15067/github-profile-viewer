@@ -1,25 +1,50 @@
-import logo from './logo.svg';
+import React from 'react';
+import {connect} from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+// Styles
 import './App.css';
 
-function App() {
+// Components
+import Form from './components/form.js';
+import CardWrapper from './components/cardWrapper';
+import Filters from './components/filters';
+
+// Action
+import { addUser, deleteUser, applyFilter} from './redux/actions/githubUsers.action';
+
+const App = (props) => {
+  const formProps = {
+    addUser: props.addUser
+  }
+  const filterProps = {
+    applyFilter: props.applyFilter
+  }
+  const cardWrapperProps = {
+    users: props.users,
+    deleteUser: props.deleteUser
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form {...formProps} />
+      <Filters {...filterProps} />
+      <CardWrapper {...cardWrapperProps} />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    users: state.users
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return  bindActionCreators({
+    addUser,
+    deleteUser,
+    applyFilter
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

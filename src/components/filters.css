@@ -1,0 +1,31 @@
+.filters {
+    margin-top: 30px;
+    
+}
+
+.sort-by-btns button {
+    font-size: 15px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: #929294;
+    
+}
+
+.sort-by-btns button:hover {
+    outline: none;
+    color: rgb(107, 104, 104);
+}
+
+.sort-by-btns .btn.active {
+    color: rgb(54, 107, 206);
+}
+
+.sort-by-btns button:active {
+    color: rgb(54, 107, 206);
+}
+
+.btn.active {
+    color: rgb(54, 100, 228);
+    font-weight: 600;
+}

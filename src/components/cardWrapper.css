@@ -1,0 +1,106 @@
+.card-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 30px 0px;
+}
+
+.card {
+    cursor: pointer;
+    height: 350px;
+    width: 200px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 10px;
+    box-shadow: 0px 0px 3px rgb(175, 174, 174);
+    display: block;
+    contain: content;
+    background: white;
+}
+
+.card:hover {
+    transform: scale(1.006);
+}
+
+.user-details {
+    padding: 0px 10px;
+}
+
+.login {
+    font-size: 17px;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.location {
+    font-size: 15px;
+    overflow: hidden;
+}
+
+.followers {
+    font-size: 15px;
+    overflow: hidden;
+}
+
+hr {
+    color: white;
+    background-color: white;
+    border: 1px solid #f3eded;
+}
+
+.delete-card-img {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: transparent;
+    color: rgb(105, 102, 102);
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+    
+}
+
+.delete-card-btn:hover {
+    color: rgb(187, 59, 59);
+}
+
+.card-content {
+    display: block;
+    contain: content;
+}
+
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    max-height: 50px !important;
+    background-color: #14141487;
+    bottom: 160px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    overflow: auto;
+   text-overflow: auto;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

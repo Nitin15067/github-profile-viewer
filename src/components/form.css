@@ -1,0 +1,53 @@
+.add-btn {
+    background-color: rgb(54, 100, 228);
+    color: white;
+    border: none;
+    border-radius: 0px 50px 50px 0px;
+    height: 25px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 50px;
+
+}
+
+.add-btn:hover {
+    background-color: rgb(55, 95, 207);
+}
+
+.username-input {
+    height: 50px;
+    border-radius: 50px 0px 0px 50px;
+    border: none;
+    box-shadow: 0px 0px 3px rgb(226, 223, 223);
+    padding: 0px 27px;
+    width: 60%;
+    font-size: 21px;
+    color: darkslategrey;
+}
+
+.username-input:hover, .username-input:focus {
+    outline: none;
+}
+
+.form-wrapper {
+    text-align: center;
+    display: grid; 
+}
+
+hr {
+    margin-top: 22px;
+    border: 1px solid #3e3b3b;
+}
+
+.form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.username-error {
+    padding-top: 10px;
+    color: rgb(170, 41, 41);
+}
