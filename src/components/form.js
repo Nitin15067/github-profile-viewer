@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 // css
-import './form.css';
+import '../styles/form.css';
 
 const Form = ({addUser}) => {
     const [username, setUsername] = useState("");

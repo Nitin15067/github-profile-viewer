@@ -1,4 +1,3 @@
-import React from 'react';
 import { filterBtns } from '../../helpers/filterHelper';
 
 // Actions

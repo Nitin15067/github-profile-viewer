@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 // css
-import './filters.css';
+import '../styles/filters.css';
 
 // Helpers
 import {filterBtns} from '../helpers/filterHelper';

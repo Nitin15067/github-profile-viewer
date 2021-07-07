@@ -1,14 +1,12 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
 
 // CSS
-import './cardWrapper.css';
+import '../styles/cardWrapper.css';
 
 // Images
 import deleteIcon from '../assets/images/deleteIcon.png';
 
 const CardWrapper = ({users, deleteUser}) => {
-    const history = useHistory();
     const routeChange = (username) => {
         window.open(`https://github.com/${username}`, '_blank'); 
           }
@@ -16,7 +14,7 @@ const CardWrapper = ({users, deleteUser}) => {
         {users.map((userData, idx) => {
             return (
                 <div className="card-content">
-                <img className="delete-card-img" onClick={() => deleteUser(idx)} src={deleteIcon} height={20} width={20} title="Delete" />
+                <img className="delete-card-img" onClick={() => deleteUser(idx)} src={deleteIcon} alt="" height={20} width={20} title="Delete" />
                 <div className="card tooltip" key={idx} onClick={() => routeChange(userData.login)}>
                     {userData.bio ? <span class="tooltiptext">{userData.bio}</span> : null }
                 <img src={userData.avatar_url} alt="" height="200" width="200" />
